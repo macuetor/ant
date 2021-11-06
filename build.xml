@@ -1,6 +1,17 @@
 <project>
     <target name="clean">
-        <delete dir="classes">
+        <delete dir="classes"/>
     </target>
     <target name="compile" depends="clean">
-</project
+        <mkdir dir="classes"/>
+        <javac includeantruntime="false" srcdir="com/ieseljust/edd/calc" destdir="classes"/>
+    </target>
+
+    <target name="run" depends="compile">
+        <java classname="com.ieseljust.edd.calc.Calcula"
+             classpath="classes">
+            <arg value="${arg0}"/>
+            <arg value="${arg1}"/>
+        </java>
+    </target>
+</project>
