@@ -1,0 +1,6 @@
+<project>
+    <target name="clean">
+        <delete dir="classes">
+    </target>
+    <target name="compile" depends="clean">
+</project
